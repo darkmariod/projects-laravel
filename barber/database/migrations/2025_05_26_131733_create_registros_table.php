@@ -13,6 +13,13 @@ return new class extends Migration
     {
         Schema::create('registros', function (Blueprint $table) {
             $table->id();
+            $table->date('fecha');
+            $table->integer('clientes');
+            $table->decimal('diario', 10,2);
+            $table->decimal('porcentaje_60')->nullable();
+            $table->decimal('adelanto', 10, 2)->nullable();
+            $table->decimal('incentivos', 10, 2)->nullable();
+            $table->decimal('porcentaje_incentivos, 10,2')->nullable();
             $table->timestamps();
         });
     }
